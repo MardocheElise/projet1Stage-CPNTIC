@@ -1,0 +1,224 @@
+*{
+     margin: 2px;
+     text-decoration: none;
+}
+
+header{
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+.logo h1{
+     font-size: 30px;
+     font-weight: bolder;
+}
+
+.logo{
+     display: flex;
+     gap: 1px;
+     align-items: center;
+     justify-content: center;
+     width: 20%;
+}
+.logo:first-child{
+     font-size: larger;
+     font-weight: bolder;
+}
+
+
+.menu-and-btn{
+     display: flex;
+     gap: 80px;
+     align-items: center;
+     padding: 10px;
+     margin-left: 10px;
+     margin-right: 10px;
+      
+}
+
+ul {
+     display: flex;
+     gap: 30px;
+     list-style: none;
+}
+
+.menu{
+     gap: 10px;
+     width: 90%;
+
+}
+
+li{
+     text-decoration: none;
+}
+
+.item{
+     cursor: pointer;
+}
+
+.item:hover{
+     color: brown;
+     transition: 3s;
+}
+
+.btn{
+     background-color: rgb(52, 92, 235);
+     border-radius: 5px;
+     cursor: pointer;
+     color: white;
+     padding: 15px;
+     width: 140px;
+}
+.btn:hover{
+     background-color: rgb(11, 9, 9);
+}
+
+li{
+     text-decoration: none;
+}
+
+.section-1{
+     margin-top: 20px;
+}
+
+#big-title{
+     font-size: 82px;
+     font-family: 'Helvetica Neue Times New Roman', Times, serif;
+}
+
+.image-1{
+     z-index: 2;
+     height: 700px;
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     background-color: rgb(2, 2, 2);
+     background-image:  linear-gradient(rgba(30, 30, 28, 0.5), rgba(24, 24, 23, 0.5)),
+                         url("/assets/ville.jpg");
+     padding: 15px;
+     
+}
+
+.image-1 p{
+     display: flex;
+     justify-content: start;
+     margin: 15px;
+     width: 32%;
+     color: white;
+     font-family: 'Times New Roman', Times, serif;
+}
+
+.image-1 button{
+     background-color: rgb(0, 0, 0);
+     border-radius: 5px;
+     cursor: pointer;
+     color: white;
+     padding: 15px;
+     margin: 15px;
+     width: 140px;
+}
+.image-1 button:hover{
+     background-color: azure;
+     color: black;
+}
+
+
+.image-2{
+     height: 500px;
+     display: flex;
+     gap: 10px;
+     background-color: rgb(67, 67, 225);
+     padding: 20px;
+}
+
+
+.image-2 .left{
+     display: flex;
+     gap: 60px;
+     justify-content: start;
+     flex-direction: column;
+}
+
+
+
+.image-2 p{
+     display: flex;
+     width: 100%;
+     color: white;
+}
+
+.left .small-title{
+     width: 100%;
+     color: white;
+}
+.small-title{
+     font-size: 60px;
+}
+ 
+
+
+
+/* section 2 */
+
+.top .small-title{
+     color: black;
+     font-size: 40px ;
+     display: flex;
+     gap: 5px;
+     width: 40%;
+}
+
+.top{
+     display:flex;
+     flex-direction: column;
+     gap: 15px;
+     margin: 15px;
+}
+
+.top .p{
+     width: 90%;
+}
+
+.trois-images{
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+}
+
+.text-and-image{
+     display: flex;
+      justify-content: space-between;
+     margin: 5px;
+}
+
+.text{
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+     width: 40%;
+}
+
+.images img{
+     width: 60%;
+}
+
+
+
+/* section-3 */
+
+.section-3{
+     display: flex;
+     justify-content: space-between;
+     margin: 20px;
+}
+
+.zone-text{
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+}
+
+.zone-text .header{
+     color: gray;
+     font-size: large;
+}
