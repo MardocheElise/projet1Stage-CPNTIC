@@ -1,3 +1,5 @@
+
+// tableau des objet a affiche de façon dynamique dans la section 3
 let info = [
 {
     li:"AiCloud",
@@ -25,6 +27,7 @@ let info = [
 }
 ];
 
+// tableau des objet a affiche de façon scrollabe dans la section 4
 let scrollImage= [
      {
           id:"1",
@@ -68,6 +71,7 @@ let scrollImage= [
 
 let index = 0;
      
+//fontion qui a affiche de manière dynanique les img et texte dans la section 3
 function displayOnebyOne(){
       
      let i = info[index];
@@ -121,7 +125,7 @@ function displayOnebyOne(){
 }
 
 
-
+// //fontion qui a affiche de manière dynanique les img et texte dans la section 3
 function scrollInfo(){
      let insert = "";
      for(i of scrollImage){
@@ -136,9 +140,6 @@ function scrollInfo(){
      document.getElementById('scroll-images').innerHTML=insert;
 }
  
-
-
-
 scrollInfo();
 displayOnebyOne();
 
