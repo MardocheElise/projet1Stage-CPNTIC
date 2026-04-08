@@ -1,13 +1,30 @@
+     @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
 *{
      margin: 2px;
      text-decoration: none;
+     font-family: 'openSans';
 }
 
+html{
+     scroll-behavior: smooth;
+}
+
+body{
+     margin-top: 80px;
+}
 /* l'en-tete du site */
+
+
 header{
      display: flex;
      align-items: center;
      justify-content: space-between;
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     background: white;
+     z-index: 1000;
 }
 .logo h1{
      font-size: 30px;
@@ -82,13 +99,93 @@ li{
 
 
   /* SECTION 1<!-- le grandt titre et l'image des drone et  stade --> */
+
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+.heading{
+    font-size:64px;
+    display:flex;
+    flex-direction:column;
+}
+
+.heading > div{
+    overflow:hidden;
+}
+
+.heading > div > p{
+    width:max-content;
+    white-space:nowrap;
+    margin:0;
+    line-height:117%;
+}
+
+.heading div:nth-child(1) p{
+    animation-delay: 0.2s;
+}
+
+.heading div:nth-child(2) p{
+    animation-delay: 0.4s;
+}
+
+.heading div:nth-child(3) p{
+    animation-delay: 0.6s;
+}
+
+.green{
+    color:#32c267;
+}
+
+/* animation */
+.slide-up{
+    animation: slideUp 0.8s ease forwards;
+    transform: translateY(100px);
+    opacity: 0;
+    font-family: sans-serif;
+}
+
+@keyframes slideUp{
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp{
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* délais pour chaque ligne */
+.heading div:nth-child(2) p{
+    animation-delay:0.05s;
+}
+
+.heading div:nth-child(3) p{
+    animation-delay:0.075s;
+}
+
+@keyframes slide-up{
+    0%{
+        transform:translateY(100px);
+    }
+    100%{
+        transform:translateY(0);
+    }
+}
+
+
 .section-1{
      margin-top: 20px;
 }
 
 #big-title{
-     font-size: 82px;
-     font-family: 'Helvetica Neue Times New Roman', Times, serif;
+     font-size: 80px;
+     font-family: sans-serif;
+     width: 90%;
+     font-weight: 500;
+     margin: 20px;
 }
 
 .image-1{
@@ -96,12 +193,44 @@ li{
      display: flex;
      flex-direction: column;
      gap: 10px;
-     background-color: rgb(2, 2, 2);
-     background-image:  linear-gradient(rgba(30, 30, 28, 0.5), rgba(24, 24, 23, 0.5)),
-                         url("/assets/ville.jpg");
      padding: 15px;
      
 }
+
+.video-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.content{
+    position: relative;
+    color: white;
+    text-align: center;
+    top: 40%;
+}
+
+/* couche sombre */
+.overlay{
+    position:absolute;
+    top:0;
+    z-index: -1;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5); /* plus le chiffre est grand plus c'est sombre */
+}
+
+.hero{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
 
 .image-1 p{
      display: flex;
@@ -109,21 +238,21 @@ li{
      margin: 15px;
      width: 32%;
      color: white;
-     font-family: 'Times New Roman', Times, serif;
+     font-family: "Open Sans";
 }
 
 .image-1 button{
-     background-color: black;
-     border-radius: 5px;
+    border-radius: 5px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
      cursor: pointer;
-     color: white;
-     border: none;
-     padding: 15px;
-     margin: 15px;
      width: 140px;
 }
 .image-1 button:hover{
-     background-color: azure;
+     background-color: rgb(255, 255, 255);
      color: black;
 }
 
@@ -148,7 +277,7 @@ li{
 
 .image-2 p{
      display: flex;
-     width: 100%;
+     width: 70%;
      color: white;
 }
 
@@ -156,57 +285,96 @@ li{
      width: 100%;
      color: white;
 }
-.small-title{
+/* .small-title{
      font-size: 50px;
 }
- 
+  */
 
 
 
    /*SECTION 2 <!-- explication des fonctionalité avec image d'illustration --> */
+ 
+.section-2{
+     margin:20px;
+}
 
-.top .small-title{
+.heading .small-title{
      color: black;
-     font-size: 40px ;
+     font-size: 44px ;
      display: flex;
+     font-weight: 500;
+     font-family: sans-serif;
      gap: 5px;
-     width: 40%;
+     width: 44%;
+     animation: slideUp 0.8s ease forwards;
+    transform: translateY(100px);
+    opacity: 0;
 }
 
 .top{
      display:flex;
      flex-direction: column;
      gap: 15px;
-     margin: 15px;
+     margin-top: 240px;
 }
 
-.top .p{
-     width: 90%;
+.top p{
+     width: 30%;
+     font-family: sans-serif;
 }
 
 .trois-images{
      display: flex;
      flex-direction: column;
-     gap: 15px;
+     gap: 20px;
+     height: 520px;
+     overflow-y: scroll;
+     scrollbar-width: none;
+     
+}
+
+.bottom{
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+     height: 550px;
+     margin-top: 20px;
+     scroll-behavior: smooth;
+}
+
+.btn123{
+     display: flex;
+     gap: 10px;
+}
+
+.btn123 .bt{
+     padding: 5px;
+     cursor: pointer;
 }
 
 .text-and-image{
      display: flex;
-      justify-content: space-between;
+     justify-content: space-between;
      margin: 5px;
+     
 }
+
+/* .texts{
+     display: flex;
+     flex-direction: column;
+     overflow-y: scroll;
+     width: 40%;
+} */
 
 .text{
      display: flex;
      flex-direction: column;
      gap: 15px;
-     width: 40%;
+     width: 30%;
+     margin-top: 30px;
 }
 
-.images img{
-     width: 60%;
-}
-
+ 
 
 a{
      color: black;
@@ -216,6 +384,8 @@ a:hover{
      color: blue;
 }
 
+
+ 
 
 
 
@@ -303,6 +473,8 @@ a:hover{
      display: flex;
      justify-content: space-between;
      margin: 15px;
+     font-family: sans-serif;
+
 }
 
 .partners .left{
@@ -320,9 +492,80 @@ a:hover{
      width: 100%;
 }
 
+.grid-logo{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    grid-template-rows: repeat(3, 1fr);   
+    gap: 10px; 
+}
+
+.grid-logo .logo{
+
+}
+
 .partners .small-title{
      color: black;
+     font-family: sans-serif;
+     font-size: 40px;
+     font-weight: 500;
 }
+
+.grid-logo div:nth-child(1) p{
+    animation-delay: 0.2s;
+}
+
+.grid-logo div:nth-child(2) p{
+    animation-delay: 0.4s;
+}
+
+.grid-logo div:nth-child(3) p{
+    animation-delay: 0.6s;
+}
+
+.grid-logo div:nth-child(4) p{
+    animation-delay: 0.8s;
+}
+.grid-logo div:nth-child(5) p{
+    animation-delay: 0.10s;
+}
+.grid-logo div:nth-child(6) p{
+    animation-delay: 0.12s;
+}
+.grid-logo div:nth-child(7) p{
+    animation-delay: 0.14s;
+}
+.grid-logo div:nth-child(8) p{
+    animation-delay: 0.16s;
+}
+.grid-logo div:nth-child(9) p{
+    animation-delay: 0.18s;
+}
+
+.grid-logo .slide-up{
+    animation: slideUp 0.8s ease forwards;
+    transform: translateY(100px);
+    opacity: 0;
+    font-family: sans-serif;
+     width: 250px;
+     height: 200px;
+}
+
+@keyframes slideUp{
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp{
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
 
 
 
@@ -367,10 +610,15 @@ a:hover{
      overflow-x: scroll;
 }
 
+.scroll-image::-webkit-scrollbar {
+    display: none;
+}
+
 .containerImage p{
      color: gray;
 }
  
+
 
 
 
@@ -384,6 +632,7 @@ a:hover{
      height: 420px;
      width: 30%;
      justify-content: space-between;
+     cursor: pointer;
 }
 
 .container-image h3{

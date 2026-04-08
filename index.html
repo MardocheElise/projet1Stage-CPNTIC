@@ -29,27 +29,48 @@
         </div>
       </div>
     </header>
-    <!-- le grandt titre et l'image des drone et  stade -->
+
+    <!-- le grand titre et l'image des drone et  stade -->
     <section class="section-1">
       <h1 id="big-title">
         Deploy Anywhere. Detect Clearly. Defend Confidently.
       </h1>
 
-      <div class="image-1">
-        <p>
-          Our drone detection platform combines AI with radar and other sensors
-          to confirm threats and accelerate action. Get complete situational
-          awareness with military-grade performance.
-        </p>
-        <button type="button">Get Demo</button>
-      </div>
+      <section class="hero">
+        <video autoplay muted loop class="video-bg">
+          <source src="assets/new-hero.mp4" type="video/mp4" />
+        </video>
+        <div class="image-1">
+          <p>
+            Our drone detection platform combines AI with radar and other
+            sensors to confirm threats and accelerate action. Get complete
+            situational awareness with military-grade performance.
+          </p>
+          <button type="button">Get Demo</button>
+        </div>
+        <div class="overlay"></div>
+      </section>
 
       <div class="image-2">
         <div class="left">
-          <h2 class="small-title">
+          <!-- <h2 class="small-title">
             Drone Threats Are Everywhere. Coverage Isn’t.
-          </h2>
-          <p>
+          </h2> -->
+          <div class="heading">
+            <div>
+              <p class="slide-up">Drone Threats</p>
+            </div>
+
+            <div>
+              <p class="slide-up">Are Everywhere.</p>
+            </div>
+
+            <div>
+              <p class="slide-up">Coverage Isn’t</p>
+            </div>
+            <div></div>
+          </div>
+          <p class="slide-up">
             Unauthorized drones disrupt operations at public gatherings,
             military sites, and campuses. Detecting them is challenging for
             users, difficult to scale and expensive. This creates a gap between
@@ -57,22 +78,27 @@
           </p>
         </div>
         <div class="right">
-          <img
-            src="assets/drone bleu.jpg"
-            width="500"
-            height="500"
-            alt="drone"
-          />
+          <div class="slide-up">
+            <img
+              src="https://cdn.prod.website-files.com/67471f312596a0f4c234affc/69653156dcd8d5d248f9d7eb_home-threats-image.avif"
+              width="500"
+              height="500"
+              alt="drone"
+            />
+          </div>
         </div>
       </div>
     </section>
+
     <!-- explication des fonctionalité avec image d'illustration -->
     <section class="section-2">
       <div class="top">
-        <h2 class="small-title">
-          We Provide Affordable, Easy to Use and Scalable C-UAS Detection
-          Systems
-        </h2>
+        <div class="heading">
+          <h2 class="small-title">
+            We Provide Affordable, Easy to Use and Scalable C-UAS Detection
+            Systems
+          </h2>
+        </div>
         <p>
           Any user can protect sensitive spaces, whether large or small from
           dangerous drones. Stop chasing false alarms. Our AI edge-to-cloud
@@ -80,9 +106,38 @@
           decisions and power autonomous systems.
         </p>
       </div>
+
       <div class="bottom">
-        <div class="trois-images">
-          <div class="text-and-image">
+        <div class="trois-images" id="textAndImage">
+          <div class="text-and-image" id="textImage1">
+            <div class="text">
+              <h2 class="slide-up">
+                Multiple Signals, One True Track, One Pane of Glass
+              </h2>
+
+              <span class="slide-up"
+                >Radar detections automatically cue PTZ cameras for visual
+                confirmation. Those tracks are checked against remote ID
+                telemetry from compliant drones. Targets are labeled as
+                friendly, potential threat, or confirmed threat so you can
+                immediately respond with confidence
+              </span>
+
+              <a href="" class="slide-up"
+                >Explore AI Platform capabilites <i>icone</i></a
+              >
+            </div>
+            <div>
+              <img
+                src="assets/image2.png"
+                alt="image1"
+                width="600"
+                height="500"
+              />
+            </div>
+          </div>
+
+          <div class="text-and-image" id="textImage2">
             <div class="text">
               <h2>Multiple Signals, One True Track, One Pane of Glass</h2>
 
@@ -98,39 +153,15 @@
             </div>
             <div>
               <img
-                src="assets/image2.png"
+                src="assets/img4.png"
                 alt="image1"
-                width="500"
-                height="400"
+                width="600"
+                height="500"
               />
             </div>
           </div>
 
-          <div class="text-and-image">
-            <div class="text">
-              <h2>Multiple Signals, One True Track, One Pane of Glass</h2>
-
-              <span
-                >Radar detections automatically cue PTZ cameras for visual
-                confirmation. Those tracks are checked against remote ID
-                telemetry from compliant drones. Targets are labeled as
-                friendly, potential threat, or confirmed threat so you can
-                immediately respond with confidence
-              </span>
-
-              <a href="">Explore AI Platform capabilites <i>icone</i></a>
-            </div>
-            <div>
-              <img
-                src="assets/image2.png"
-                alt="image1"
-                width="500"
-                height="400"
-              />
-            </div>
-          </div>
-
-          <div class="text-and-image">
+          <div class="text-and-image" id="textImage3">
             <div class="text">
               <h2>Enterprise Radar Networks</h2>
 
@@ -144,16 +175,103 @@
 
               <a href="">Explore AI Platform capabilites <i>icone</i></a>
             </div>
-            <div>
-              <img
-                src="assets/image3.png"
-                alt="image1"
-                width="500"
-                height="400"
-              />
-            </div>
+
+            <img
+              src="assets/image3.png"
+              alt="image1"
+              width="600"
+              height="500"
+            />
           </div>
         </div>
+        <div class="btn123">
+          <a href="#textImage1"
+            ><span class="bt" onclick="displayInfoAndImage1()">01</span></a
+          >
+          <a href="#textImage2"
+            ><span class="bt" id="btn2" onclick="displayInfoAndImage2()"
+              >02</span
+            ></a
+          >
+          <a href="#textImage3"
+            ><span class="bt" id="btn1" onclick="displayInfoAndImage3()"
+              >03</span
+            ></a
+          >
+        </div>
+        <!-- <div class="texts">
+                <div class="text">
+                  <h2>Enterprise Radar Networks</h2>
+
+                  <span
+                    >See airspace activity for all your sites in one place.
+                    Field users and central teams can zoom into any site
+                    together for detailed situational awareness. MatrixSpace
+                    AiCloud significantly expands capabilities beyond
+                    multi-sensor threat detection
+                  </span>
+
+                  <a href="">Explore AI Platform capabilites <i>icone</i></a>
+                </div>
+
+                <div class="text">
+                  <h2>Multiple Signals, One True Track, One Pane of Glass</h2>
+
+                  <span
+                    >Radar detections automatically cue PTZ cameras for visual
+                    confirmation. Those tracks are checked against remote ID
+                    telemetry from compliant drones. Targets are labeled as
+                    friendly, potential threat, or confirmed threat so you can
+                    immediately respond with confidence
+                  </span>
+
+                  <a href="">Explore AI Platform capabilites <i>icone</i></a>
+                </div>
+
+                <div class="text">
+                  <h2>Enterprise Radar Networks</h2>
+
+                  <span
+                    >See airspace activity for all your sites in one place.
+                    Field users and central teams can zoom into any site
+                    together for detailed situational awareness. MatrixSpace
+                    AiCloud significantly expands capabilities beyond
+                    multi-sensor threat detection
+                  </span>
+
+                  <a href="">Explore AI Platform capabilites <i>icone</i></a>
+                </div>       
+        </div>
+
+        <div class="images">
+                <div>
+                  <img
+                    src="assets/image2.png"
+                    alt="image1"
+                    width="500"
+                    height="400"
+                  />
+                </div>
+
+                <div>
+                  <img
+                    src="assets/image3.png"
+                    alt="image1"
+                    width="500"
+                    height="400"
+                  />
+                </div>
+
+                <div>
+                  <img
+                    src="assets/image3.png"
+                    alt="image1"
+                    width="500"
+                    height="400"
+                  />
+                </div>
+        </div>
+        </div> -->
       </div>
     </section>
 
@@ -174,7 +292,36 @@
         </p>
       </div>
       <div class="rigth">
-        <img src="assets/partner.png" alt="image parteners" />
+        <!-- <img src="assets/partner.png" alt="image parteners" /> -->
+        <div class="grid-logo">
+          <div class="slide-up">
+            <img src="assets/logo1.png" alt="" width="200" height="200" />
+          </div>
+          <div class="slide-up">
+            <img src="assets/logo2.png" alt="" width="200" height="200" />
+          </div>
+          <div class="slide-up">
+            <img src="assets/logo3.png" alt="" width="200" height="200" />
+          </div>
+          <div class="slide-up">
+            <img src="assets/logo4.png" alt="" width="200" height="200" />
+          </div>
+          <div class="slide-up">
+            <img src="assets/logo5.png" alt="" width="200" height="200" />
+          </div>
+          <div class="slide-up">
+            <img src="assets/logo6.png" alt="" width="200" height="200" />
+          </div>
+          <div class="slide-up">
+            <img src="assets/logo7.png" alt="" width="200" height="200" />
+          </div>
+          <div class="slide-up">
+            <img src="assets/logo8.png" alt="" width="200" height="200" />
+          </div>
+          <div class="slide-up">
+            <img src="assets/logo9.png" alt="" width="200" height="200" />
+          </div>
+        </div>
       </div>
     </section>
 

@@ -69,6 +69,29 @@ let scrollImage= [
      }
 ]
 
+// let infoAndImages=[
+//      {
+//           id:'1',
+//           title:'Multiple Signals, One True Track, One Pane of Glass',
+//           texte:'Radar detections automatically cue PTZ cameras for visualconfirmation. Those tracks are checked against remote IDtelemetry from compliant drones. Targets are labeled asfriendly, potential threat, or confirmed threat so you can immediately respond with confidence',
+//           imag:'assets/image2.png'
+//      },
+
+//      {
+//           id:'2',
+//           title:'Enterprise Radar Networks',
+//           texte:'See airspace activity for all your sites in one place.Field users and central teams can zoom into any site together for detailed situational awareness. MatrixSpace AiCloud significantly expands capabilities beyond multi-sensor threat detection',
+//           imag:'assets/img1.png'
+//      },
+
+//      {
+//           id:'3',
+//           title:'Multiple Signals, One True Track, One Pane of Glass',
+//           texte:'See airspace activity for all your sites in one place.Field users and central teams can zoom into any site together for detailed situational awareness. MatrixSpace AiCloud significantly expands capabilities beyond multi-sensor threat detection',
+//           imag:'assets/img4.png'
+//      },
+// ]
+
 let index = 0;
      
 //fontion qui a affiche de manière dynanique les img et texte dans la section 3
@@ -125,7 +148,7 @@ function displayOnebyOne(){
 }
 
 
-// //fontion qui a affiche de manière dynanique les img et texte dans la section 3
+// //fontion qui a affiche de manière dynanique les img et texte dans la section 4
 function scrollInfo(){
      let insert = "";
      for(i of scrollImage){
@@ -139,10 +162,101 @@ function scrollInfo(){
      }
      document.getElementById('scroll-images').innerHTML=insert;
 }
+
+const scrollContainer = document.getElementById("scroll-images");
+const btnGauche = document.getElementById("gauche");
+const btnDroit = document.getElementById("droit");
+
+// Distance de défilement
+const scrollAmount = 400;
+
+// Bouton droite 
+btnDroit.addEventListener("click", () => {
+    scrollContainer.scrollBy({
+        left: scrollAmount,
+        behavior: "smooth"
+    });
+});
+
+// Bouton gauche 
+btnGauche.addEventListener("click", () => {
+    scrollContainer.scrollBy({
+        left: -scrollAmount,
+        behavior: "smooth"
+    });
+});
+
+// let text_image = document.getElementById('textAndImage');
+
+// function displayInfoAndImage1(){
+//      text_image.innerHTML=`<div class="text-and-image" id="textAndImage">
+//                 <div class="text">
+//                   <h2>${infoAndImages[0].title}</h2>
+
+//                   <span
+//                     >${infoAndImages[0].texte}
+//                   </span>
+
+//                   <a href="">Explore AI Platform capabilites <i>icone</i></a>
+//                 </div>
+//                 <div>
+//                   <img
+//                     src="${infoAndImages[0].imag}"
+//                     alt="image1"
+//                     width="500"
+//                     height="400"
+//                   />
+//                 </div>
+//               </div>`
+     
+// }
+
+// function displayInfoAndImage2(){
+//      text_image.innerHTML=`<div class="text-and-image" id="textAndImage">
+//                 <div class="text">
+//                   <h2>${infoAndImages[1].title}</h2>
+
+//                   <span
+//                     >${infoAndImages[1].texte}
+//                   </span>
+
+//                   <a href="">Explore AI Platform capabilites <i>icone</i></a>
+//                 </div>
+//                 <div>
+//                   <img
+//                     src="${infoAndImages[1].imag}"
+//                     alt="image1"
+//                     width="500"
+//                     height="400"
+//                   />
+//                 </div>
+//               </div>`
+// }
+
+// function displayInfoAndImage3(){
+//      text_image.innerHTML=`<div class="text-and-image" id="textAndImage">
+//                 <div class="text">
+//                   <h2>${infoAndImages[2].title}</h2>
+
+//                   <span
+//                     >${infoAndImages[2].texte}
+//                   </span>
+
+//                   <a href="">Explore AI Platform capabilites <i>icone</i></a>
+//                 </div>
+//                 <div>
+//                   <img
+//                     src="${infoAndImages[2].imag}"
+//                     alt="image1"
+//                     width="500"
+//                     height="400"
+//                   />
+//                 </div>
+//               </div>`
+// }
  
 scrollInfo();
 displayOnebyOne();
-
 
 
 
